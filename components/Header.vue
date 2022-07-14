@@ -1,27 +1,25 @@
 <template>
-  <a-layout>
-    <a-layout-header :style="{ position: 'fixed', zIndex: 1, width: '100%' }">
-      <a-menu theme="dark" mode="horizontal">
-        <a-menu-item key="1">
-          <nuxt-link to="/">
-            <h1 class="logo">Trevor Watson</h1>
-          </nuxt-link>
-        </a-menu-item>
-        <a-menu-item key="2">
+  <div>
+    <b-navbar type="dark" variant="dark">
+      <b-navbar-brand key="1">
+        <nuxt-link to="/">Trevor Watson</nuxt-link>
+      </b-navbar-brand>
+      <b-navbar-nav>
+        <b-nav-item key="2">
           <nuxt-link to="/dev"> Dev </nuxt-link>
-        </a-menu-item>
-        <a-menu-item key="3">
+        </b-nav-item>
+        <b-nav-item key="3">
           <nuxt-link to="/music"> Music </nuxt-link>
-        </a-menu-item>
-        <a-menu-item key="4">
+        </b-nav-item>
+        <b-nav-item key="4">
           <nuxt-link to="/photo"> Photo </nuxt-link>
-        </a-menu-item>
-        <a-menu-item key="5">
+        </b-nav-item>
+        <b-nav-item key="5">
           <nuxt-link to="/contact"> Contact </nuxt-link>
-        </a-menu-item>
-      </a-menu>
-    </a-layout-header>
-  </a-layout>
+        </b-nav-item>
+      </b-navbar-nav>
+    </b-navbar>
+  </div>
 </template>
 
 <script>
@@ -35,8 +33,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-.logo {
-  color: white;
-}
-</style>
+<style></style>
