@@ -1,6 +1,8 @@
 <template>
   <b-container>
-    <h1>Hi, I’m Trevor Watson.</h1>
+    <div>
+      <h1>Hi, I’m Trevor Watson.</h1>
+    </div>
     <h3>
       I’m a professional software engineer and musician. I also enjoy
       photography and videography.
