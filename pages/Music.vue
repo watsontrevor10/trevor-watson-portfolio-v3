@@ -6,27 +6,40 @@
         A list the musical projects I work on and bands/groups I play with
       </p>
     </div>
-    <div>
-      <h2 class="textCenter spacedOut">Personal Projects</h2>
+    <b-tabs cards pills justified>
       <div v-for="(video, i) in videos" :key="i">
-        <hr />
-        <h3 class="textCenter">{{ video.title }}</h3>
-        <div>
-          <p>{{ video.subtitle }}</p>
-        </div>
-        <div class="textCenter videoContainer">
-          <iframe
-            width="1000em"
-            height="550em"
-            :src="`${video.src}`"
-            :title="`${video.title}`"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
+        <b-tab :title="`${video.title}`">
+          <h2 class="textCenter spacedOut">{{ video.title }}</h2>
+          <div class="spacedOut">
+            <p>{{ video.subtitle }}</p>
+            <div class="textCenter">
+              <b-link :href="`${video.url}`">
+                <b-button variant="outline-primary" class="spacedOut">
+                  {{ video.urlText }}
+                </b-button>
+              </b-link>
+            </div>
+          </div>
+          <div
+            class="textCenter videoContainer"
+            v-if="`${video.type === 'video'}`"
+          >
+            <iframe
+              width="1000em"
+              height="550em"
+              :src="`${video.src}`"
+              :title="`${video.title}`"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="textCenter videoContainer" v-else>
+            <b-img-lazy :src="`${video.src}`" fluid-grow></b-img-lazy>
+          </div>
+        </b-tab>
       </div>
-    </div>
+    </b-tabs>
   </b-container>
 </template>
 
@@ -37,29 +50,57 @@ export default {
       videos: [
         {
           title: "Mini Bass Grooves",
-          subtitle: "I record and post weekly bass grooves for #musicMonday",
+          type: "video",
+          subtitle:
+            "I record and post weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnGgW2JTty_ytboYpVCT1rWJ",
-        },
-        {
-          title: "Bass Solos",
-          subtitle: "Improvised Bass Solos",
-          src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnF_VwKZ4GjcVdUj_pDYukxY",
-        },
-        {
-          title: "Collaborations",
-          subtitle: "Collaborations with other artists",
-          src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnFgFmKEglBHxq-eOgyufHfZ",
+          url: "https://www.youtube.com/c/TrevorWatson10",
+          urlText: "See More Videos",
         },
         {
           title: "3# Jazz Trio",
+          type: "video",
           subtitle:
-            "I play with a sick jazz trio locally, playing weddings, corporate events and other parties.",
+            "3# is a jazz trio that me and two friends put together years ago. We play weddings, corporate events and other parties.",
           src: "https://www.youtube.com/embed/YBFQ2aVHFZ4",
+          url: "https://www.threesharp.com/",
+          urlText: "3# Website",
         },
         {
           title: "The Civilians",
-          subtitle: "The Civilians Band",
-          src: "",
+          type: "photo",
+          subtitle:
+            "The Civilians Band is comprised of Army musicians who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll",
+          src: "https://res.cloudinary.com/dx4uolokd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1630554638/Civilians/clark.wedding-2477_ax3vjn.jpg",
+          url: "https://www.theciviliansband.com/",
+          urlText: "Civilians Website",
+        },
+        {
+          title: "23rd Army Band",
+          type: "video",
+          subtitle:
+            "I have been a member of the 23rd Army Band for over a decade. I perform in a number of musical ensembles and styles, but my primary is in the rock band Article 15.",
+          src: "https://www.youtube.com/embed/QEFXoevqiZQ",
+          url: "",
+          urlText: "Check out Facebook page",
+        },
+        {
+          title: "Bass Solos",
+          type: "video",
+          subtitle:
+            "I love improvisation, so sometimes I mess around with solos.",
+          src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnF_VwKZ4GjcVdUj_pDYukxY",
+          url: "https://www.youtube.com/c/TrevorWatson10",
+          urlText: "See more videos",
+        },
+        {
+          title: "Collaborations",
+          type: "video",
+          subtitle:
+            "Occasionally I get to collaborate with different artists and jam out.",
+          src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnFgFmKEglBHxq-eOgyufHfZ",
+          url: "https://www.youtube.com/c/TrevorWatson10",
+          urlText: "See more videos",
         },
       ],
     };
@@ -73,7 +114,7 @@ export default {
 }
 
 .spacedOut {
-  margin: 1em;
+  margin: 1em 0 0.5em 0;
 }
 
 hr {
