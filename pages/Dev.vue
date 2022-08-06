@@ -15,7 +15,7 @@
         </b-card-text>
         <div style="text-align: center">
           <nuxt-link :to="`${project.fields.slug}`">
-            <b-button>See Project</b-button>
+            <b-button variant="primary">See Project</b-button>
           </nuxt-link>
         </div>
       </b-card>
