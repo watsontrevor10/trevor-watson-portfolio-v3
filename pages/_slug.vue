@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <nuxt-link to="/dev">
-      <b-button>back</b-button>
+      <b-button variant="outline-secondary" class="spacedOut">Back</b-button>
     </nuxt-link>
     <div>
       <h1>{{ fields.projectName }}</h1>
@@ -22,8 +22,10 @@
       background="#ababab"
       img-width="1024"
       img-height="480"
+      max-height="480"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
+      class="spacedOut"
     >
       <b-carousel-slide
         v-for="(screenshot, i) in screenshots"

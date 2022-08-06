@@ -2,11 +2,12 @@
   <b-container>
     <div class="textCenter spacedOut">
       <h1>My Music Projects</h1>
-      <p class="textCenter">
-        A list the musical projects I work on and bands/groups I play with
-      </p>
+      <h5 class="textCenter">
+        I work with a variety of bands and work on a number of musical projects.
+        Check out my projects!
+      </h5>
     </div>
-    <b-tabs cards pills justified>
+    <b-tabs cards pills justified class="spacedOut">
       <div v-for="(video, i) in videos" :key="i">
         <b-tab :title="`${video.title}`">
           <h2 class="textCenter spacedOut">{{ video.title }}</h2>
@@ -111,10 +112,6 @@ export default {
 <style>
 .videoContainer {
   margin: 0 auto;
-}
-
-.spacedOut {
-  margin: 1em 0 0.5em 0;
 }
 
 hr {
