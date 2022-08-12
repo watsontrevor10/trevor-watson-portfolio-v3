@@ -13,6 +13,12 @@
           <h2 class="textCenter spacedOut">{{ video.title }}</h2>
           <div class="spacedOut">
             <p>{{ video.subtitle }}</p>
+            <b-row class="textCenter">
+              <p class="listData">Genres:</p>
+              <div v-for="(genre, i) in video.genres" :key="i" class="listData">
+                <b-badge pill variant="info">{{ genre }}</b-badge>
+              </div>
+            </b-row>
             <div class="textCenter">
               <b-link :href="`${video.url}`">
                 <b-button variant="outline-primary" class="spacedOut">
@@ -52,6 +58,7 @@ export default {
         {
           title: "Mini Bass Grooves",
           type: "video",
+          genres: ["funk", "rock", "jazz", "bossa", "disco", "pop", "country"],
           subtitle:
             "I record and post weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnGgW2JTty_ytboYpVCT1rWJ",
@@ -61,6 +68,7 @@ export default {
         {
           title: "3# Jazz Trio",
           type: "video",
+          genres: ["jazz"],
           subtitle:
             "3# is a jazz trio that me and two friends put together years ago. We play weddings, corporate events and other parties.",
           src: "https://www.youtube.com/embed/YBFQ2aVHFZ4",
@@ -70,6 +78,7 @@ export default {
         {
           title: "The Civilians",
           type: "photo",
+          genres: ["rock", "country", "pop"],
           subtitle:
             "The Civilians Band is comprised of Army musicians who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll",
           src: "https://res.cloudinary.com/dx4uolokd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1630554638/Civilians/clark.wedding-2477_ax3vjn.jpg",
@@ -79,6 +88,7 @@ export default {
         {
           title: "23rd Army Band",
           type: "video",
+          genres: ["rock", "country", "pop", "jazz", "classical"],
           subtitle:
             "I have been a member of the 23rd Army Band for over a decade. I perform in a number of musical ensembles and styles, but my primary is in the rock band Article 15.",
           src: "https://www.youtube.com/embed/QEFXoevqiZQ",
@@ -88,6 +98,7 @@ export default {
         {
           title: "Bass Solos",
           type: "video",
+          genres: ["jazz", "rock", "pop"],
           subtitle:
             "I love improvisation, so sometimes I mess around with solos.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnF_VwKZ4GjcVdUj_pDYukxY",
@@ -97,6 +108,7 @@ export default {
         {
           title: "Collaborations",
           type: "video",
+          genres: ["rock", "funk", "jazz"],
           subtitle:
             "Occasionally I get to collaborate with different artists and jam out.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnFgFmKEglBHxq-eOgyufHfZ",
@@ -112,6 +124,10 @@ export default {
 <style>
 .videoContainer {
   margin: 0 auto;
+}
+
+.listData {
+  margin: 0 0.3em 0 0.3em;
 }
 
 hr {

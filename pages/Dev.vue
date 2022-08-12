@@ -1,9 +1,9 @@
 <template>
   <b-container>
-    <div class="textCenter">
+    <div class="textCenter spacedOut">
       <h1>My Dev Projects</h1>
     </div>
-    <b-card-group columns>
+    <b-card-group columns class="spacedOut">
       <b-card
         v-for="(project, i) in projects"
         :key="i"
