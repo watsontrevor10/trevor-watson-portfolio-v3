@@ -1,16 +1,17 @@
 <template>
   <b-container>
     <div class="textCenter spacedOut">
-      <h1>My Music Projects</h1>
-      <h5 class="textCenter">
+      <h1>Music Projects</h1>
+      <h5 class="textCenter spacedOut">
         I work with a variety of bands and work on a number of musical projects.
         Check out my projects!
       </h5>
     </div>
-    <b-tabs cards pills justified class="spacedOut">
+    <b-tabs cards pills justified>
+      <hr />
       <div v-for="(video, i) in videos" :key="i">
         <b-tab :title="`${video.title}`">
-          <h2 class="textCenter spacedOut">{{ video.title }}</h2>
+          <h3 class="textCenter">{{ video.title }}</h3>
           <div class="spacedOut">
             <p>{{ video.subtitle }}</p>
             <b-row class="textCenter">
@@ -60,7 +61,7 @@ export default {
           type: "video",
           genres: ["funk", "rock", "jazz", "bossa", "disco", "pop", "country"],
           subtitle:
-            "I record and post weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
+            "I've been wanting to do more video content, but it's been hard with the full-time job, kids, military service, etc. So I decided to record and post short weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnGgW2JTty_ytboYpVCT1rWJ",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See More Videos",
@@ -80,7 +81,7 @@ export default {
           type: "photo",
           genres: ["rock", "country", "pop"],
           subtitle:
-            "The Civilians Band is comprised of Army musicians who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll",
+            "The Civilians Band is comprised of Army musicians who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll.",
           src: "https://res.cloudinary.com/dx4uolokd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1630554638/Civilians/clark.wedding-2477_ax3vjn.jpg",
           url: "https://www.theciviliansband.com/",
           urlText: "Civilians Website",
@@ -110,7 +111,7 @@ export default {
           type: "video",
           genres: ["rock", "funk", "jazz"],
           subtitle:
-            "Occasionally I get to collaborate with different artists and jam out.",
+            "Occasionally I get to collaborate with different artists and jam out. I love playing music, and sometimes we get together in the real world, but sometimes that's just not possible, so I love to do remote jams as well.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnFgFmKEglBHxq-eOgyufHfZ",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See more videos",
@@ -124,10 +125,6 @@ export default {
 <style>
 .videoContainer {
   margin: 0 auto;
-}
-
-.listData {
-  margin: 0 0.3em 0 0.3em;
 }
 
 hr {

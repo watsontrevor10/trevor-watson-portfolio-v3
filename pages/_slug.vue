@@ -6,16 +6,15 @@
     <div>
       <h1>{{ fields.projectName }}</h1>
       <p>{{ fields.description.content[0].content[0].value }}</p>
-      <div>
-        <strong>Tech Stack:</strong>
-        <div v-for="(stack, i) in fields.stack" :key="i">
-          <code>{{ stack }}</code>
+      <b-row>
+        <strong class="listData">Tech Stack:</strong>
+        <div v-for="(stack, i) in fields.stack" :key="i" class="listData">
+          <b-badge pill variant="info">{{ stack }}</b-badge>
         </div>
-      </div>
+      </b-row>
     </div>
     <b-carousel
       id="project-carousel"
-      v-model="slide"
       :interval="4000"
       controls
       indicators
@@ -33,11 +32,6 @@
         :img-src="`${screenshot.fields.file.url}`"
       ></b-carousel-slide>
     </b-carousel>
-    <!-- <b-card :title="`${fields.projectName}`" :img-src="`${mainImage.file.url}`">
-      <b-card-text>
-        {{ fields.description.content[0].content[0].value }}
-      </b-card-text>
-    </b-card> -->
   </b-container>
 </template>
 
@@ -48,7 +42,6 @@ const client = createClient();
 export default {
   data() {
     return {
-      slide: 0,
       sliding: null,
     };
   },
