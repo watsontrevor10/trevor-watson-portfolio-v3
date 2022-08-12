@@ -1,5 +1,61 @@
 <template>
   <b-container>
-    <h1>My Photos</h1>
+    <div class="textCenter spacedOut">
+      <h1>My Photos</h1>
+    </div>
+    <div class="mainContainer">
+      <div v-for="(photo, i) in photos" :key="i" class="imgContainer">
+        <img
+          :src="`${photo.fields.images[0].url}`"
+          :alt="`${photo.fields.meta}`"
+          class="image"
+        />
+      </div>
+    </div>
   </b-container>
 </template>
+
+<script>
+import { createClient } from "~/plugins/contentful.js";
+const client = createClient();
+
+export default {
+  name: "photo page",
+
+  asyncData({ env }) {
+    return Promise.all([
+      client.getEntries({
+        content_type: "cloudinary",
+      }),
+    ])
+      .then(([entries]) => {
+        return {
+          photos: entries.items,
+        };
+      })
+      .catch(console.error);
+  },
+};
+</script>
+
+<style>
+.mainContainer {
+  column-count: 3;
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  grid-gap: 0 0;
+  line-height: 0;
+}
+
+.imgContainer {
+  padding: 0;
+  margin: 0;
+  break-inside: avoid-column;
+}
+
+.image {
+  width: 100% !important;
+  height: 100% !important;
+  margin-bottom: 0 !important;
+}
+</style>

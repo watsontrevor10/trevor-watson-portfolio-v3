@@ -19,7 +19,14 @@
         </b-link>
       </h1>
     </div>
-    <b-form @submit="onSubmit">
+    <b-form
+      @submit="onSubmit"
+      name="contactMe"
+      netlify
+      netlify-honeypot="bot-field"
+    >
+      <!-- Hidden input to check for bots -->
+      <input type="hidden" name="form-name" value="contactMe" />
       <b-form-group id="name-group" label="Name" label-for="name">
         <b-form-input
           id="name"

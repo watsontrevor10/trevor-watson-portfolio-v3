@@ -21,22 +21,24 @@
         you're interested in talking in more detail.
       </p>
     </div>
+    <hr />
     <b-card-group columns class="spacedOut">
       <b-card
         v-for="(project, i) in projects"
         :key="i"
         :img-src="`${project.fields.mainImage.fields.file.url}`"
-        :title="`${project.fields.projectName}`"
         img-top
       >
-        <b-card-text>
-          {{ project.fields.blurb }}
-        </b-card-text>
-        <div style="text-align: center">
-          <nuxt-link :to="`${project.fields.slug}`">
-            <b-button variant="outline-primary">See Project</b-button>
-          </nuxt-link>
-        </div>
+        <b-card-body>
+          <div style="text-align: center">
+            <b-link :to="`${project.fields.slug}`">
+              <b-card-title>{{ project.fields.projectName }}</b-card-title>
+            </b-link>
+          </div>
+          <b-card-text>
+            {{ project.fields.blurb }}
+          </b-card-text>
+        </b-card-body>
       </b-card>
     </b-card-group>
   </b-container>
