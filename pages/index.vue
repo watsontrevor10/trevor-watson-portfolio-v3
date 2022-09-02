@@ -1,18 +1,24 @@
 <template>
-  <b-container>
-    <div class="textCenter spacedOut">
+  <v-container>
+    <div>
       <h1>Hi,</h1>
       <h4>my name is</h4>
       <h1>Trevor Watson</h1>
     </div>
-    <b-carousel id="main-carousel" fade img-width="1024" img-height="480">
-      <b-carousel-slide
+    <v-carousel
+      id="main-carousel"
+      cycle
+      height="480"
+      :show-arrows="false"
+      hide-delimiters
+    >
+      <v-carousel-item
         v-for="(image, i) in images"
         :key="i"
-        :img-src="`${image}`"
-      ></b-carousel-slide>
-    </b-carousel>
-    <div class="spacedOut">
+        :src="`${image}`"
+      ></v-carousel-item>
+    </v-carousel>
+    <div>
       <h3>I’m a professional software engineer and musician.</h3>
       <div>
         <p>This is where I share some of the projects that I'm working on.</p>
@@ -30,11 +36,10 @@
         </p>
       </div>
     </div>
-  </b-container>
+  </v-container>
 </template>
 
 <script>
-import NuxtLogo from "../components/NuxtLogo.vue";
 export default {
   name: "IndexPage",
   data() {

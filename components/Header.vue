@@ -1,23 +1,23 @@
 <template>
-  <b-navbar fixed sticky type="dark" variant="dark">
+  <v-app-bar height="100" max-height="100" elevation="1" color="primary">
     <nuxt-link to="/">
-      <b-navbar-brand key="1" href="/"> Trevor Watson </b-navbar-brand>
+      <v-app-bar-title key="1" href="/">Trevor Watson</v-app-bar-title>
     </nuxt-link>
-    <b-navbar-nav>
+    <div>
       <nuxt-link to="/dev">
-        <b-nav-item key="2" href="/dev">Dev</b-nav-item>
+        <a key="2" href="/dev">Dev</a>
       </nuxt-link>
       <nuxt-link to="/music">
-        <b-nav-item key="3" href="/music">Music</b-nav-item>
+        <a key="3" href="/music">Music</a>
       </nuxt-link>
       <nuxt-link to="/photo">
-        <b-nav-item key="4" href="/photo">Photo</b-nav-item>
+        <a key="4" href="/photo">Photo</a>
       </nuxt-link>
       <nuxt-link to="/contact">
-        <b-nav-item key="5" href="/contact">Contact</b-nav-item>
+        <a key="5" href="/contact">Contact</a>
       </nuxt-link>
-    </b-navbar-nav>
-  </b-navbar>
+    </div>
+  </v-app-bar>
 </template>
 
 <script>

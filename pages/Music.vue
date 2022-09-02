@@ -1,60 +1,54 @@
 <template>
-  <b-container>
-    <div class="textCenter spacedOut">
+  <v-container>
+    <div>
       <h1>Music Projects</h1>
-      <h5 class="textCenter spacedOut">
+      <h5>
         I work with a variety of bands and work on a number of musical projects.
         Check out my projects!
       </h5>
     </div>
-    <b-tabs cards pills justified>
-      <hr />
-      <div v-for="(video, i) in videos" :key="i">
-        <b-tab :title="`${video.title}`">
-          <h3 class="textCenter">{{ video.title }}</h3>
-          <div class="spacedOut">
-            <p>{{ video.subtitle }}</p>
-            <b-row class="textCenter">
-              <p class="listData">Genres:</p>
-              <div v-for="(genre, i) in video.genres" :key="i" class="listData">
-                <b-badge pill variant="info">{{ genre }}</b-badge>
-              </div>
-            </b-row>
-            <div class="textCenter">
-              <b-link :href="`${video.url}`">
-                <b-button variant="outline-primary" class="spacedOut">
-                  {{ video.urlText }}
-                </b-button>
-              </b-link>
+    <v-card flat>
+      <v-tabs centered icons-and-text v-model="tab">
+        <v-tab v-for="(video, i) in videos" :key="i" :href="`#tab-${i}`">{{
+          video.title
+        }}</v-tab>
+      </v-tabs>
+      <v-tabs-items v-model="tab">
+        <v-tab-item v-for="(video, i) in videos" :key="i" :value="`tab-${i}`">
+          <v-card class="mx-auto my-10">
+            <v-card-title>{{ video.title }}</v-card-title>
+            <v-card-text>{{ video.subtitle }}</v-card-text>
+            <v-card-actions>
+              <a :href="`${video.url}`">
+                <v-btn color="primary" text>Explore More</v-btn>
+              </a>
+            </v-card-actions>
+            <div v-if="`${video.type === 'video'}`">
+              <iframe
+                width="1000em"
+                height="550em"
+                :src="`${video.src}`"
+                :title="`${video.title}`"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
-          </div>
-          <div
-            class="textCenter videoContainer"
-            v-if="`${video.type === 'video'}`"
-          >
-            <iframe
-              width="1000em"
-              height="550em"
-              :src="`${video.src}`"
-              :title="`${video.title}`"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
-          </div>
-          <div class="textCenter videoContainer" v-else>
-            <b-img-lazy :src="`${video.src}`" fluid-grow></b-img-lazy>
-          </div>
-        </b-tab>
-      </div>
-    </b-tabs>
-  </b-container>
+            <div v-else>
+              <v-img :src="`${video.src}`" height="100" contain></v-img>
+            </div>
+          </v-card>
+        </v-tab-item>
+      </v-tabs-items>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      tab: null,
       videos: [
         {
           title: "Mini Bass Grooves",

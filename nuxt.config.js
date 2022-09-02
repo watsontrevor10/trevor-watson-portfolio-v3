@@ -25,7 +25,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // main CSS styles
-    "~/assets/main.css",
+    "@/assets/css/main.css",
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,13 +35,27 @@ export default {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [],
+  buildModules: ["@nuxtjs/vuetify"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["bootstrap-vue/nuxt"],
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  vuetify: {
+    theme: {
+      themes: {
+        light: {
+          primary: "#ee7539",
+          secondary: "#312d2e",
+          accent: "#f9c834",
+          info: "#f4bd74",
+          anchor: "#312d2e",
+        },
+      },
+    },
+  },
 
   env: {
     DEV_PROJECTS_TYPE_ID: config.DEV_PROJECTS_TYPE_ID,

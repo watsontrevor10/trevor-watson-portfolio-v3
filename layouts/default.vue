@@ -1,10 +1,19 @@
 <template>
-  <div>
+  <v-app class="application">
     <Header />
-    <b-container>
+
+    <v-main>
       <Nuxt />
-    </b-container>
-  </div>
+    </v-main>
+  </v-app>
 </template>
 
-<style></style>
+<style lang="scss">
+@font-face {
+  font-family: "lo-res";
+  src: url("https://use.typekit.net/gld6sco.css");
+}
+.application {
+  font-family: "lo-res";
+}
+</style>

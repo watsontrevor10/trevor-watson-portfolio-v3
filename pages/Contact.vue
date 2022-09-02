@@ -1,76 +1,62 @@
 <template>
-  <b-container>
-    <div class="textCenter spacedOut">
-      <h1>Contact Me</h1>
+  <div>
+    <div>
+      <h3>Contact Me</h3>
     </div>
-    <div class="textCenter">
-      <h1>
-        <b-link
-          href="https://www.linkedin.com/in/trevorjwatson/"
-          target="_blank"
-        >
-          <b-icon-linkedin variant="primary"> </b-icon-linkedin>
-        </b-link>
-        <b-link href="https://twitter.com/trevdevbass" target="_blank">
-          <b-icon-twitter variant="primary"></b-icon-twitter>
-        </b-link>
-        <b-link href="https://www.youtube.com/c/TrevorWatson10" target="_blank">
-          <b-icon-youtube variant="primary"></b-icon-youtube>
-        </b-link>
-      </h1>
+    <div>
+      <a href="https://www.linkedin.com/in/trevorjwatson/" target="_blank">
+        <v-icon large color="info">mdi-linkedin</v-icon>
+      </a>
+      <a href="https://twitter.com/trevdevbass" target="_blank">
+        <v-icon large color="info">mdi-twitter</v-icon>
+      </a>
+      <a href="https://www.youtube.com/c/TrevorWatson10" target="_blank">
+        <v-icon large color="info">mdi-youtube</v-icon>
+      </a>
     </div>
-    <b-form
-      @submit="onSubmit"
-      name="contactMe"
-      netlify
-      netlify-honeypot="bot-field"
-    >
-      <!-- Hidden input to check for bots -->
-      <input type="hidden" name="form-name" value="contactMe" />
-      <b-form-group id="name-group" label="Name" label-for="name">
-        <b-form-input
-          id="name"
-          label="Name"
-          v-model="form.name"
-          placeholder="Enter name"
-          required
-        >
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="email-group" label="Email Address" label-for="email">
-        <b-form-input
-          id="email"
-          label="Email Address"
-          v-model="form.email"
-          placeholder="Enter email"
-          type="email"
-          required
-        >
-        </b-form-input>
-      </b-form-group>
-      <b-form-group id="request-group" label="Request" label-for="request">
-        <b-form-textarea
-          id="request"
-          v-model="form.request"
-          placeholder="What'cha wanna talk about?"
-          required
-        >
-        </b-form-textarea>
-      </b-form-group>
-      <b-button type="submit" variant="primary">Submit</b-button>
-    </b-form>
-  </b-container>
+    <v-col cols="6">
+      <v-form
+        @submit="onSubmit"
+        name="contactMe"
+        netlify
+        netlify-honeypot="bot-field"
+      >
+        <!-- Hidden input to check for bots -->
+        <input type="hidden" name="form-name" value="contactMe" />
+        <div id="name-group" label="Name" label-for="name">
+          <v-text-field
+            id="name"
+            label="Name"
+            v-model="form.name"
+            required
+          ></v-text-field>
+        </div>
+        <div id="email-group" label="Email Address" label-for="email">
+          <v-text-field
+            id="email"
+            label="Email Address"
+            v-model="form.email"
+            type="email"
+            required
+          >
+          </v-text-field>
+        </div>
+        <div id="request-group" label="Request" label-for="request">
+          <v-textarea
+            rows="3"
+            label="Your Note"
+            id="request"
+            v-model="form.request"
+            required
+          ></v-textarea>
+        </div>
+        <v-btn type="submit" color="primary">Submit</v-btn>
+      </v-form>
+    </v-col>
+  </div>
 </template>
 
 <script>
-import {
-  Bicon,
-  BIconArrowUp,
-  BIconLinkedin,
-  BIconTwitter,
-  BIconYoutube,
-} from "bootstrap-vue";
-
 export default {
   data() {
     return {
@@ -80,12 +66,6 @@ export default {
         request: "",
       },
     };
-  },
-  components: {
-    BIconArrowUp,
-    BIconLinkedin,
-    BIconTwitter,
-    BIconYoutube,
   },
   methods: {
     onSubmit(event) {

@@ -1,38 +1,30 @@
 <template>
-  <b-container>
-    <nuxt-link to="/dev">
-      <b-button variant="outline-secondary" class="spacedOut">Back</b-button>
-    </nuxt-link>
-    <div>
+  <v-container>
+    <v-row>
+      <button>
+        <nuxt-link to="/dev"> Back </nuxt-link>
+      </button>
+    </v-row>
+    <v-row>
       <h1>{{ fields.projectName }}</h1>
       <p>{{ fields.description.content[0].content[0].value }}</p>
-      <b-row>
-        <strong class="listData">Tech Stack:</strong>
-        <div v-for="(stack, i) in fields.stack" :key="i" class="listData">
-          <b-badge pill variant="info">{{ stack }}</b-badge>
-        </div>
-      </b-row>
-    </div>
-    <b-carousel
-      id="project-carousel"
-      :interval="4000"
-      controls
-      indicators
-      background="#ababab"
-      img-width="1024"
-      img-height="480"
-      max-height="480"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-      class="spacedOut"
-    >
-      <b-carousel-slide
-        v-for="(screenshot, i) in screenshots"
-        :key="i"
-        :img-src="`${screenshot.fields.file.url}`"
-      ></b-carousel-slide>
-    </b-carousel>
-  </b-container>
+    </v-row>
+    <v-row>
+      <strong>Tech Stack:</strong>
+      <div v-for="(stack, i) in fields.stack" :key="i">
+        <v-chip color="primary" small>{{ stack }}</v-chip>
+      </div>
+    </v-row>
+    <v-row>
+      <v-carousel id="project-carousel" cycle height="700">
+        <v-carousel-item
+          v-for="(screenshot, i) in screenshots"
+          :key="i"
+          :src="`${screenshot.fields.file.url}`"
+        ></v-carousel-item>
+      </v-carousel>
+    </v-row>
+  </v-container>
 </template>
 
 <script>

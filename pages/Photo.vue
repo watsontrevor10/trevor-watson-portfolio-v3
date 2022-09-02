@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <v-container>
     <div class="textCenter spacedOut">
       <h1>My Photos</h1>
     </div>
@@ -12,7 +12,7 @@
         />
       </div>
     </div>
-  </b-container>
+  </v-container>
 </template>
 
 <script>
