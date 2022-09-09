@@ -1,8 +1,8 @@
 <template>
   <v-container>
-    <div class="textCenter spacedOut">
-      <h1>My Photos</h1>
-    </div>
+    <v-container>
+      <h1 class="centered">My Photos</h1>
+    </v-container>
     <div class="mainContainer">
       <div v-for="(photo, i) in photos" :key="i" class="imgContainer">
         <img

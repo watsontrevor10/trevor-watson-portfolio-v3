@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <div>
+    <div class="centered">
       <h1>Music Projects</h1>
       <h5>
         I work with a variety of bands and work on a number of musical projects.
@@ -15,7 +15,7 @@
       </v-tabs>
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="(video, i) in videos" :key="i" :value="`tab-${i}`">
-          <v-card class="mx-auto my-10">
+          <v-card class="mx-auto my-10" width="1000" flat>
             <v-card-title>{{ video.title }}</v-card-title>
             <v-card-text>{{ video.subtitle }}</v-card-text>
             <v-card-actions>
@@ -23,7 +23,7 @@
                 <v-btn color="primary" text>Explore More</v-btn>
               </a>
             </v-card-actions>
-            <div v-if="`${video.type === 'video'}`">
+            <div v-if="`${video.type === 'video'}`" class="centered">
               <iframe
                 width="1000em"
                 height="550em"
@@ -35,7 +35,7 @@
               ></iframe>
             </div>
             <div v-else>
-              <v-img :src="`${video.src}`" height="100" contain></v-img>
+              <v-img :src="`${video.src}`" contain></v-img>
             </div>
           </v-card>
         </v-tab-item>

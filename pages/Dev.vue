@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <v-container>
     <div class="textCenter spacedOut">
       <h1>Dev Projects</h1>
     </div>
@@ -22,26 +22,35 @@
       </p>
     </div>
     <hr />
-    <b-card-group columns class="spacedOut">
-      <b-card
-        v-for="(project, i) in projects"
-        :key="i"
-        :img-src="`${project.fields.mainImage.fields.file.url}`"
-        img-top
-      >
-        <b-card-body>
-          <div style="text-align: center">
-            <b-link :to="`${project.fields.slug}`">
-              <b-card-title>{{ project.fields.projectName }}</b-card-title>
-            </b-link>
-          </div>
-          <b-card-text>
-            {{ project.fields.blurb }}
-          </b-card-text>
-        </b-card-body>
-      </b-card>
-    </b-card-group>
-  </b-container>
+    <v-container fluid>
+      <v-row dense>
+        <v-col cols="6" v-for="(project, i) in projects" :key="i">
+          <v-card>
+            <v-img
+              :src="`${project.fields.mainImage.fields.file.url}`"
+              max-width="600"
+              height="500"
+            ></v-img>
+            <v-card-title>
+              <nuxt-link :to="`${project.fields.slug}`">{{
+                project.fields.projectName
+              }}</nuxt-link>
+            </v-card-title>
+            <v-card-text>
+              {{ project.fields.blurb }}
+            </v-card-text>
+            <v-card-actions>
+              <v-btn color="primary">
+                <nuxt-link :to="`${project.fields.slug}`"
+                  >See Project</nuxt-link
+                >
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
 </template>
 
 <script>

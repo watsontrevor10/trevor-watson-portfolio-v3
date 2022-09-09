@@ -1,19 +1,19 @@
 <template>
-  <div>
-    <div>
-      <h3>Contact Me</h3>
-    </div>
-    <div>
+  <v-container>
+    <v-container>
+      <h1 class="centered">Contact Me</h1>
+    </v-container>
+    <v-container>
       <a href="https://www.linkedin.com/in/trevorjwatson/" target="_blank">
         <v-icon large color="info">mdi-linkedin</v-icon>
-      </a>
-      <a href="https://twitter.com/trevdevbass" target="_blank">
-        <v-icon large color="info">mdi-twitter</v-icon>
       </a>
       <a href="https://www.youtube.com/c/TrevorWatson10" target="_blank">
         <v-icon large color="info">mdi-youtube</v-icon>
       </a>
-    </div>
+      <a href="https://twitter.com/trevdevbass" target="_blank">
+        <v-icon large color="info">mdi-twitter</v-icon>
+      </a>
+    </v-container>
     <v-col cols="6">
       <v-form
         @submit="onSubmit"
@@ -53,7 +53,7 @@
         <v-btn type="submit" color="primary">Submit</v-btn>
       </v-form>
     </v-col>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -80,4 +80,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+a {
+  text-decoration: none;
+}
+</style>

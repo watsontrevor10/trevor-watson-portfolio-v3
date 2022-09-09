@@ -32,7 +32,8 @@
           some value in it!
         </p>
         <p>
-          Feel free to reach out with questions or if you just want to chat!
+          Feel free to <nuxt-link to="/contact">reach out</nuxt-link> with
+          questions or if you just want to chat!
         </p>
       </div>
     </div>
