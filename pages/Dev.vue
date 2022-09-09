@@ -1,13 +1,11 @@
 <template>
   <v-container>
-    <div class="textCenter spacedOut">
-      <h1>Dev Projects</h1>
-    </div>
-    <div>
-      <p>
-        I am a full-time web developer for my day job, and I am having a great
-        time doing it.
-      </p>
+    <PageTitle
+      pageTitle="Dev Projects"
+      pageSubtitle="I am a full-time web developer for my day job, and I am having a great
+        time doing it."
+    />
+    <v-container class="mt-10">
       <p>
         Most of my professional experience has been in backend development
         (stuff that doesn't end up being seen by a user), and so the lists of
@@ -20,8 +18,8 @@
         <a href="https://www.linkedin.com/in/trevorjwatson/">LinkedIn</a> if
         you're interested in talking in more detail.
       </p>
-    </div>
-    <hr />
+    </v-container>
+
     <v-container fluid>
       <v-row dense>
         <v-col cols="6" v-for="(project, i) in projects" :key="i">
@@ -55,11 +53,11 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
+import PageTitle from "../components/Page-Title.vue";
 const client = createClient();
 
 export default {
   name: "dev page",
-
   asyncData({ env }) {
     return Promise.all([
       client.getEntries({
@@ -73,6 +71,7 @@ export default {
       })
       .catch(console.error);
   },
+  components: { PageTitle },
 };
 </script>
 

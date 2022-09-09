@@ -16,10 +16,18 @@ export default {
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
+      {
+        hid: "description",
+        name: "description",
+        content:
+          "The portfolio webpage of Trevor Watson; web developer, musician, photographer.",
+      },
       { name: "format-detection", content: "telephone=no" },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "stylesheet", href: "https://use.typekit.net/gld6sco.css" },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -44,6 +52,7 @@ export default {
   build: {},
 
   vuetify: {
+    // treeShake: true,
     theme: {
       themes: {
         light: {

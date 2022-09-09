@@ -1,12 +1,11 @@
 <template>
   <v-container>
-    <div class="centered">
-      <h1>Music Projects</h1>
-      <h5>
-        I work with a variety of bands and work on a number of musical projects.
-        Check out my projects!
-      </h5>
-    </div>
+    <PageTitle
+      pageTitle="Music Projects"
+      pageSubtitle="I work with a variety of bands and work on a number of musical projects.
+        Check out my projects!"
+    />
+
     <v-card flat>
       <v-tabs centered icons-and-text v-model="tab">
         <v-tab v-for="(video, i) in videos" :key="i" :href="`#tab-${i}`">{{
@@ -15,14 +14,18 @@
       </v-tabs>
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="(video, i) in videos" :key="i" :value="`tab-${i}`">
-          <v-card class="mx-auto my-10" width="1000" flat>
-            <v-card-title>{{ video.title }}</v-card-title>
-            <v-card-text>{{ video.subtitle }}</v-card-text>
-            <v-card-actions>
-              <a :href="`${video.url}`">
-                <v-btn color="primary" text>Explore More</v-btn>
-              </a>
-            </v-card-actions>
+          <v-card class="mx-auto my-6" width="1000" flat>
+            <v-card-title class="text-h5">{{ video.title }}</v-card-title>
+            <v-card-text class="text-body-1 my-3">{{
+              video.subtitle
+            }}</v-card-text>
+            <div>
+              <v-card-actions>
+                <a :href="`${video.url}`" target="blank" class="mx-auto">
+                  <v-btn color="primary">Explore More</v-btn>
+                </a>
+              </v-card-actions>
+            </div>
             <div v-if="`${video.type === 'video'}`" class="centered">
               <iframe
                 width="1000em"
@@ -32,6 +35,7 @@
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
+                class="my-8"
               ></iframe>
             </div>
             <div v-else>
@@ -45,6 +49,7 @@
 </template>
 
 <script>
+import PageTitle from "../components/Page-Title.vue";
 export default {
   data() {
     return {
@@ -87,7 +92,7 @@ export default {
           subtitle:
             "I have been a member of the 23rd Army Band for over a decade. I perform in a number of musical ensembles and styles, but my primary is in the rock band Article 15.",
           src: "https://www.youtube.com/embed/QEFXoevqiZQ",
-          url: "",
+          url: "https://www.facebook.com/23rdarmyband",
           urlText: "Check out Facebook page",
         },
         {
@@ -113,6 +118,7 @@ export default {
       ],
     };
   },
+  components: { PageTitle },
 };
 </script>
 

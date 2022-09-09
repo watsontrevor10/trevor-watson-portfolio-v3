@@ -1,7 +1,10 @@
 <template>
   <v-container>
     <v-container>
-      <h1 class="centered">My Photos</h1>
+      <PageTitle
+        pageTitle="My Photos"
+        pageSubtitle="Some of my favorite photos I've taken over the years"
+      />
     </v-container>
     <div class="mainContainer">
       <div v-for="(photo, i) in photos" :key="i" class="imgContainer">
@@ -17,11 +20,11 @@
 
 <script>
 import { createClient } from "~/plugins/contentful.js";
+import PageTitle from "../components/Page-Title.vue";
 const client = createClient();
 
 export default {
   name: "photo page",
-
   asyncData({ env }) {
     return Promise.all([
       client.getEntries({
@@ -35,6 +38,7 @@ export default {
       })
       .catch(console.error);
   },
+  components: { PageTitle },
 };
 </script>
 
