@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "Roboto";
+    src: url(~assets/fonts/RobotoMono-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "Roboto Bold";
+    src: url(~assets/fonts/RobotoMono-Bold.ttf);
+}
+
+html {
+    font-family: "Roboto";
+}
+h1, h2, h3, h4, h5 {
+    font-family: "Roboto Bold";
+}

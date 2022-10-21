@@ -1,19 +1,19 @@
 <template>
   <v-container>
-    <v-row>
-      <button>
-        <nuxt-link to="/dev"> Back </nuxt-link>
-      </button>
-    </v-row>
-    <v-row>
-      <h1>{{ fields.projectName }}</h1>
-      <p>{{ fields.description.content[0].content[0].value }}</p>
-    </v-row>
+    <PageTitle
+      :pageTitle="`${fields.projectName}`"
+      :pageSubtitle="`${fields.description.content[0].content[0].value}`"
+    />
     <v-row>
       <strong>Tech Stack:</strong>
-      <div v-for="(stack, i) in fields.stack" :key="i">
+      <div v-for="(stack, i) in fields.stack" class="mb-8 ml-2" :key="i">
         <v-chip color="primary" small>{{ stack }}</v-chip>
       </div>
+    </v-row>
+    <v-row>
+      <v-btn color="primary" class="mb-8">
+        <nuxt-link to="/dev"> Back </nuxt-link>
+      </v-btn>
     </v-row>
     <v-row>
       <v-carousel id="project-carousel" cycle height="700">

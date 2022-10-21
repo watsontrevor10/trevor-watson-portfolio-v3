@@ -1,5 +1,5 @@
 <template>
-  <v-app class="application">
+  <v-app>
     <Header />
 
     <v-main>
@@ -10,12 +10,4 @@
   </v-app>
 </template>
 
-<style lang="scss">
-@font-face {
-  font-family: "lo-res";
-  src: url("https://use.typekit.net/gld6sco.css");
-}
-.application {
-  font-family: "lo-res";
-}
-</style>
+<style></style>

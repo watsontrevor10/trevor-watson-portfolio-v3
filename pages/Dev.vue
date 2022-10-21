@@ -5,7 +5,7 @@
       pageSubtitle="I am a full-time web developer for my day job, and I am having a great
         time doing it."
     />
-    <v-container class="mt-10">
+    <v-container>
       <p>
         Most of my professional experience has been in backend development
         (stuff that doesn't end up being seen by a user), and so the lists of

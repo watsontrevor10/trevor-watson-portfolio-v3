@@ -52,7 +52,8 @@ export default {
   build: {},
 
   vuetify: {
-    // treeShake: true,
+    customVariable: ["~/assets/main.css"],
+    treeShake: true,
     theme: {
       themes: {
         light: {

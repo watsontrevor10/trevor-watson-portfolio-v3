@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-container>
-      <h1 class="">Hi,</h1>
-      <h4>my name is</h4>
-      <h1>Trevor Watson</h1>
+      <h1 class="text-h1 ma-8">Hi,</h1>
+      <h4 class="text-h4 ml-16">my name is</h4>
+      <h1 class="text-h1 ma-8 ml-16">Trevor Watson</h1>
     </v-container>
     <v-carousel
       id="main-carousel"
