@@ -22,12 +22,17 @@
             <v-form
               @submit="onSubmit"
               name="contact"
+              method="POST"
               netlify
               action="/"
-              netlify-honeypot="bot-field"
             >
               <!-- Hidden input to check for bots -->
-              <input type="hidden" name="form-name" value="contact" />
+              <input
+                type="hidden"
+                name="form-name"
+                value="contact"
+                netlify-honeypot="bot-field"
+              />
               <div id="name-group" label="Name" label-for="name">
                 <v-text-field
                   id="name"
@@ -55,7 +60,9 @@
                   required
                 ></v-textarea>
               </div>
-              <v-btn type="submit" color="primary" class="mt-4">Submit</v-btn>
+              <v-btn type="submit" color="primary" value="submit" class="mt-4"
+                >Submit</v-btn
+              >
             </v-form>
           </v-col>
           <v-col>
