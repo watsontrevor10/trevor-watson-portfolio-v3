@@ -69,7 +69,7 @@ export default {
     namespace: "fathom", // optional
     spa: "history", // recommended
     siteId: "BNAXHQYJ",
-    url: "https://custom.fathom.domain.com/script.js",
+    url: "https://cdn.usefathom.com/script.js",
     honorDNT: false,
     includedDomains: ["https://trevorwatson.me/", "localhost:3000"],
     excludedDomains: ["google.com"],
