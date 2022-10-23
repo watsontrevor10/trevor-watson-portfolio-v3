@@ -217,7 +217,7 @@ export default {
       socialLinks: [
         {
           name: "Patreon",
-          url: "patreon.com/user?u=81529202",
+          url: "https://www.patreon.com/user?u=81529202",
           icon: "mdi-patreon",
         },
         {
