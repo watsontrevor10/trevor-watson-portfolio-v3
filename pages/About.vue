@@ -4,67 +4,14 @@
       pageTitle="About Me"
       pageSubtitle="Here are some more details about me and some ways you can contact or support me."
     />
-    <v-container>
-      <v-row class="mb-3 mt-1">
-        <div class="justify-center" v-for="(links, i) in socialLinks" :key="i">
-          <a :href="`${links.url}`" target="_blank" class="mx-4">
-            <v-icon large color="info">{{ links.icon }}</v-icon>
-            {{ links.name }}
-          </a>
-        </div>
-      </v-row>
-    </v-container>
 
     <v-container class="mt-4 mb-10">
       <v-row>
         <v-layout row wrap>
-          <v-col cols="6">
-            <v-form
-              @submit="onSubmit"
-              name="contact"
-              method="post"
-              action="/"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
-            >
-              <!-- Hidden input to check for bots -->
-              <input type="hidden" name="form-name" value="contact" />
-              <div id="name-group" label="Name" label-for="name">
-                <v-text-field
-                  id="name"
-                  label="Name"
-                  v-model="form.name"
-                  required
-                ></v-text-field>
-              </div>
-              <div id="email-group" label="Email Address" label-for="email">
-                <v-text-field
-                  id="email"
-                  label="Email Address"
-                  v-model="form.email"
-                  type="email"
-                  required
-                >
-                </v-text-field>
-              </div>
-              <div id="request-group" label="Request" label-for="request">
-                <v-textarea
-                  rows="3"
-                  label="Your Note"
-                  id="request"
-                  v-model="form.request"
-                  required
-                ></v-textarea>
-              </div>
-              <v-btn type="submit" color="primary" value="submit" class="mt-4"
-                >Submit</v-btn
-              >
-            </v-form>
-          </v-col>
           <v-col>
             <v-card flat>
               <v-card-text
-                >Feel free to reach out in any way that works best for
+                >Feel free to reach out in any way below that works best for
                 you!</v-card-text
               >
               <v-card-text
@@ -78,6 +25,17 @@
             </v-card>
           </v-col>
         </v-layout>
+      </v-row>
+    </v-container>
+
+    <v-container class="mb-10">
+      <v-row class="justify-center">
+        <div class="justify-center" v-for="(links, i) in socialLinks" :key="i">
+          <a :href="`${links.url}`" target="_blank" class="mx-4">
+            <v-icon large color="info">{{ links.icon }}</v-icon>
+            {{ links.name }}
+          </a>
+        </div>
       </v-row>
     </v-container>
 
@@ -216,14 +174,14 @@ export default {
       },
       socialLinks: [
         {
-          name: "Patreon",
-          url: "https://www.patreon.com/user?u=81529202",
-          icon: "mdi-patreon",
-        },
-        {
           name: "YouTube",
           url: "https://www.youtube.com/c/TrevorWatson10",
           icon: "mdi-youtube",
+        },
+        {
+          name: "Patreon",
+          url: "https://www.patreon.com/user?u=81529202",
+          icon: "mdi-patreon",
         },
         {
           name: "Instagram",
