@@ -7,7 +7,7 @@
     />
 
     <v-card flat>
-      <v-tabs centered icons-and-text v-model="tab">
+      <v-tabs centered icons-and-text v-model="tab" show-arrows>
         <v-tab v-for="(video, i) in videos" :key="i" :href="`#tab-${i}`">{{
           video.title
         }}</v-tab>
@@ -28,21 +28,22 @@
                 </a>
               </v-card-actions>
             </div>
-            <div v-if="`${video.type === 'video'}`" class="centered">
+            <v-container
+              v-if="`${video.type === 'video'}`"
+              class="videoContainer my-8"
+            >
               <iframe
-                width="1000em"
-                height="550em"
+                class="video"
                 :src="`${video.src}`"
                 :title="`${video.title}`"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen
-                class="my-8"
               ></iframe>
-            </div>
-            <div v-else>
-              <v-img :src="`${video.src}`" contain></v-img>
-            </div>
+            </v-container>
+            <v-container v-else>
+              <v-img :src="`${video.src}`" max-width="100%" contain></v-img>
+            </v-container>
           </v-card>
         </v-tab-item>
       </v-tabs-items>
@@ -126,7 +127,26 @@ export default {
 
 <style>
 .videoContainer {
-  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  max-width: 100%;
+  block-size: auto;
 }
 
 hr {

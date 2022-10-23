@@ -3,7 +3,7 @@
     <v-app-bar height="60" elevate-on-scroll fixed color="primary" app>
       <v-container>
         <v-row>
-          <v-tabs background-color="primary">
+          <v-tabs background-color="primary" show-arrows>
             <v-tab to="/" nuxt>
               <nuxt-link to="/">
                 <v-app-bar-title key="1">

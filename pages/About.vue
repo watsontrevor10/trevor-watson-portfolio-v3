@@ -17,61 +17,63 @@
 
     <v-container class="mt-4 mb-10">
       <v-row>
-        <v-col cols="6">
-          <v-form
-            @submit="onSubmit"
-            name="contactMe"
-            netlify
-            netlify-honeypot="bot-field"
-          >
-            <!-- Hidden input to check for bots -->
-            <input type="hidden" name="form-name" value="contactMe" />
-            <div id="name-group" label="Name" label-for="name">
-              <v-text-field
-                id="name"
-                label="Name"
-                v-model="form.name"
-                required
-              ></v-text-field>
-            </div>
-            <div id="email-group" label="Email Address" label-for="email">
-              <v-text-field
-                id="email"
-                label="Email Address"
-                v-model="form.email"
-                type="email"
-                required
+        <v-layout row wrap>
+          <v-col cols="6">
+            <v-form
+              @submit="onSubmit"
+              name="contactMe"
+              netlify
+              netlify-honeypot="bot-field"
+            >
+              <!-- Hidden input to check for bots -->
+              <input type="hidden" name="form-name" value="contactMe" />
+              <div id="name-group" label="Name" label-for="name">
+                <v-text-field
+                  id="name"
+                  label="Name"
+                  v-model="form.name"
+                  required
+                ></v-text-field>
+              </div>
+              <div id="email-group" label="Email Address" label-for="email">
+                <v-text-field
+                  id="email"
+                  label="Email Address"
+                  v-model="form.email"
+                  type="email"
+                  required
+                >
+                </v-text-field>
+              </div>
+              <div id="request-group" label="Request" label-for="request">
+                <v-textarea
+                  rows="3"
+                  label="Your Note"
+                  id="request"
+                  v-model="form.request"
+                  required
+                ></v-textarea>
+              </div>
+              <v-btn type="submit" color="primary" class="mt-4">Submit</v-btn>
+            </v-form>
+          </v-col>
+          <v-col>
+            <v-card flat>
+              <v-card-text
+                >Feel free to reach out in any way that works best for
+                you!</v-card-text
               >
-              </v-text-field>
-            </div>
-            <div id="request-group" label="Request" label-for="request">
-              <v-textarea
-                rows="3"
-                label="Your Note"
-                id="request"
-                v-model="form.request"
-                required
-              ></v-textarea>
-            </div>
-            <v-btn type="submit" color="primary" class="mt-4">Submit</v-btn>
-          </v-form>
-        </v-col>
-        <v-col cols="6">
-          <v-card flat>
-            <v-card-text
-              >Feel free to reach out in any way that works best for
-              you!</v-card-text
-            >
-            <v-card-text
-              >If you enjoy the creative projects I'm working on, you can also
-              support my creative endeavors on Patreon.</v-card-text
-            >
-            <v-card-text>
-              I hope that you'll keep in touch and let me know what you think,
-              or reach out for collaborations or development projects.
-            </v-card-text>
-          </v-card>
-        </v-col>
+              <v-card-text
+                >If you enjoy the creative projects I'm working on, you can also
+                support my creative endeavors on Patreon.</v-card-text
+              >
+              <v-card-text>
+                I hope that you'll keep in touch and let me know what you think,
+                or reach out for collaborations or development projects.
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-layout>
       </v-row>
     </v-container>
 
