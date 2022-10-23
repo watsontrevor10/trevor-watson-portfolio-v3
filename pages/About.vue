@@ -25,14 +25,10 @@
               method="POST"
               netlify
               action="/"
+              netlify-honeypot="bot-field"
             >
               <!-- Hidden input to check for bots -->
-              <input
-                type="hidden"
-                name="form-name"
-                value="contact"
-                netlify-honeypot="bot-field"
-              />
+              <input type="hidden" name="form-name" value="contact" />
               <div id="name-group" label="Name" label-for="name">
                 <v-text-field
                   id="name"
