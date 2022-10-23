@@ -22,9 +22,9 @@
             <v-form
               @submit="onSubmit"
               name="contact"
-              method="POST"
-              netlify
+              method="post"
               action="/"
+              data-netlify="true"
               netlify-honeypot="bot-field"
             >
               <!-- Hidden input to check for bots -->
