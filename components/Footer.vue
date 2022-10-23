@@ -35,6 +35,7 @@
 export default {
   data: () => ({
     socialIcons: [
+      { icon: "mdi-patreon", url: "patreon.com/user?u=81529202" },
       { icon: "mdi-youtube", url: "https://www.youtube.com/c/TrevorWatson10" },
       { icon: "mdi-twitter", url: "https://twitter.com/trevdevbass" },
       {

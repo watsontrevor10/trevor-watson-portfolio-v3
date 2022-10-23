@@ -1,11 +1,9 @@
 <template>
   <v-container>
-    <v-container>
-      <PageTitle
-        pageTitle="My Photos"
-        pageSubtitle="Some of my favorite photos I've taken over the years"
-      />
-    </v-container>
+    <PageTitle
+      pageTitle="My Photos"
+      pageSubtitle="Some of my favorite photos I've taken over the years"
+    />
     <div class="mainContainer">
       <div v-for="(photo, i) in photos" :key="i" class="imgContainer">
         <img

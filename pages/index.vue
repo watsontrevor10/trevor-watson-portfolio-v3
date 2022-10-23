@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-container>
-      <h1 class="text-h1 ma-8">Hi,</h1>
-      <h4 class="text-h4 ml-16">my name is</h4>
-      <h1 class="text-h1 ma-8 ml-16">Trevor Watson</h1>
+      <h1 class="text-h1 ma-6">Hi,</h1>
+      <h4 class="text-h4 ml-14">my name is</h4>
+      <h1 class="text-h1 ma-6 ml-16">Trevor Watson</h1>
     </v-container>
     <v-carousel
       id="main-carousel"
@@ -39,35 +39,11 @@
             it!
           </v-card-text>
           <v-card-text>
-            Feel free to <nuxt-link to="/contact">reach out</nuxt-link> with
-            questions or if you just want to chat!
+            Feel free to
+            <a href="/about"><b>reach out</b></a> with questions or if you just
+            want to chat!
           </v-card-text>
         </div>
-      </v-card>
-      <v-card width="500">
-        <v-card-title>My Story</v-card-title>
-        <v-timeline>
-          <v-timeline-item>
-            <v-card-title slot="opposite" class="text-h5"
-              >Long Time Ago</v-card-title
-            >
-            <v-card-text>Born as the cutest child in the world</v-card-text>
-          </v-timeline-item>
-          <v-timeline-item>
-            <v-card-title slot="opposite" class="text-h5"
-              >Bunch o' Years</v-card-title
-            >
-            <v-card-text>Grew up, learned things, did stuff</v-card-text>
-          </v-timeline-item>
-          <v-timeline-item>
-            <v-card-title slot="opposite" class="text-h5">2014</v-card-title>
-            <v-card-text>Tech support</v-card-text>
-          </v-timeline-item>
-          <v-timeline-item>
-            <v-card-title slot="opposite" class="text-h5">2015</v-card-title>
-            <v-card-text>Technical Consulting</v-card-text>
-          </v-timeline-item>
-        </v-timeline>
       </v-card>
     </v-container>
   </v-container>

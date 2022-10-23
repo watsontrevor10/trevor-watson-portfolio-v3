@@ -8,7 +8,7 @@
     <v-container>
       <p>
         Most of my professional experience has been in backend development
-        (stuff that doesn't end up being seen by a user), and so the lists of
+        (stuff that doesn't end up being seen by a user), and so the list of
         projects below is mostly comprised of simple little projects that I've
         taken on for fun or for friends and family.
       </p>
@@ -37,7 +37,7 @@
             <v-card-text>
               {{ project.fields.blurb }}
             </v-card-text>
-            <v-card-actions>
+            <v-card-actions class="justify-center">
               <v-btn color="primary">
                 <nuxt-link :to="`${project.fields.slug}`"
                   >See Project</nuxt-link
