@@ -21,13 +21,13 @@
           <v-col cols="6">
             <v-form
               @submit="onSubmit"
-              name="contactMe"
+              name="contact"
               netlify
               action="/"
               netlify-honeypot="bot-field"
             >
               <!-- Hidden input to check for bots -->
-              <input type="hidden" name="form-name" value="contactMe" />
+              <input type="hidden" name="form-name" value="contact" />
               <div id="name-group" label="Name" label-for="name">
                 <v-text-field
                   id="name"
