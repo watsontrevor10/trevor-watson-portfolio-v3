@@ -15,7 +15,9 @@
       <v-tabs-items v-model="tab">
         <v-tab-item v-for="(video, i) in videos" :key="i" :value="`tab-${i}`">
           <v-card class="mx-auto my-6" width="1000" flat>
-            <v-card-title class="text-h5">{{ video.title }}</v-card-title>
+            <v-card-title class="text-h5 justify-center">{{
+              video.title
+            }}</v-card-title>
             <v-card-text class="text-body-1 my-3">{{
               video.subtitle
             }}</v-card-text>
@@ -91,7 +93,7 @@ export default {
           genres: ["rock", "country", "pop", "jazz", "classical"],
           subtitle:
             "I have been a member of the 23rd Army Band for over a decade. I perform in a number of musical ensembles and styles, but my primary is in the rock band Article 15.",
-          src: "https://www.youtube.com/embed/QEFXoevqiZQ",
+          src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnHtzOPa9Yb7_7Lw7FAI5xGH",
           url: "https://www.facebook.com/23rdarmyband",
           urlText: "Check out Facebook page",
         },

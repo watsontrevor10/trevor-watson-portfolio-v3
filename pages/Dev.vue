@@ -7,6 +7,15 @@
     />
     <v-container>
       <p>
+        I began my web development journey fairly late in my life (I was in my
+        30s), and I have had the great fortune of being able to pivot from
+        technical consulting and sales into software engineering.
+      </p>
+      <p>
+        Currently I am a software engineer at a fintech company, where I focus
+        primarily on reverse engeineering and automation scripting.
+      </p>
+      <p>
         Most of my professional experience has been in backend development
         (stuff that doesn't end up being seen by a user), and so the list of
         projects below is mostly comprised of simple little projects that I've
@@ -15,8 +24,10 @@
       <p>
         As time goes on I hope to grow the list of projects that I've worked on
         here, but you can check my professional credentials on
-        <a href="https://www.linkedin.com/in/trevorjwatson/">LinkedIn</a> if
-        you're interested in talking in more detail.
+        <a href="https://www.linkedin.com/in/trevorjwatson/"><b>LinkedIn</b></a>
+        and <a to="/about"><b>contact me</b></a> if you're interested in talking
+        in more detail, or if you have a web project that you'd like to talk
+        through.
       </p>
     </v-container>
 
