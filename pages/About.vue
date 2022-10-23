@@ -23,6 +23,7 @@
               @submit="onSubmit"
               name="contactMe"
               netlify
+              action="/"
               netlify-honeypot="bot-field"
             >
               <!-- Hidden input to check for bots -->
@@ -242,7 +243,6 @@ export default {
   methods: {
     onSubmit(event) {
       event.preventDefault();
-      alert(JSON.stringify(this.form));
       // Reset our form values
       this.form.email = "";
       this.form.name = "";
