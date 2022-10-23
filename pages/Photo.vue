@@ -2,7 +2,7 @@
   <v-container>
     <PageTitle
       pageTitle="My Photos"
-      pageSubtitle="Some of my favorite photos I've taken over the years"
+      pageSubtitle="Photography is a hobby I've taken up in recent years and get a lot of joy out of it.  Enjoy some of my favorite photos I've taken over the years."
     />
     <div class="mainContainer">
       <div v-for="(photo, i) in photos" :key="i" class="imgContainer">

@@ -1,9 +1,9 @@
 <template>
   <v-container>
     <v-container>
-      <h1 class="text-h1 ma-6">Hi,</h1>
-      <h4 class="text-h4 ml-14">my name is</h4>
-      <h1 class="text-h1 ma-6 ml-16">Trevor Watson</h1>
+      <h1 class="text-h2 ma-8">Hi,</h1>
+      <h4 class="text-h5 ml-14">my name is</h4>
+      <h1 class="text-h2 ma-6 ml-16">Trevor Watson</h1>
     </v-container>
     <v-carousel
       id="main-carousel"
@@ -30,13 +30,13 @@
           >
           <v-card-text>
             Between my full-time work as a
-            <nuxt-link to="/dev">software developer</nuxt-link>, my part-time
-            work as a <nuxt-link to="/music">gigging</nuxt-link> and Army
-            musician or just taking
-            <nuxt-link to="/photo">pictures</nuxt-link> of my adventures there
-            is a lot variation in the types of projects I take on. I want to
-            share what I'm working on here, and hope that you find some value in
-            it!
+            <nuxt-link to="/dev"><b>software engineer</b></nuxt-link
+            >, my part-time work as a
+            <nuxt-link to="/music"><b>gigging</b></nuxt-link> and Army musician
+            or just taking <nuxt-link to="/photo"><b>pictures</b></nuxt-link> of
+            my adventures there is a lot variation in the types of projects I
+            take on. I want to share what I'm working on here, and hope that you
+            find some value in it!
           </v-card-text>
           <v-card-text>
             Feel free to

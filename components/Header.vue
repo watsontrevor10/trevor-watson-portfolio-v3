@@ -1,12 +1,6 @@
 <template>
   <v-card class="mb-14">
-    <v-app-bar
-      height="60"
-      elevate-on-scroll
-      fixed
-      scroll-target="#scrolling-techniques-7"
-      color="primary"
-    >
+    <v-app-bar height="60" elevate-on-scroll fixed color="primary" app>
       <v-container>
         <v-row>
           <v-tabs background-color="primary">
@@ -37,7 +31,6 @@
                 <nuxt-link to="/about" key="5">About Me</nuxt-link>
               </v-list-item-title>
             </v-tab>
-            <!-- </v-col> -->
           </v-tabs>
         </v-row>
       </v-container>
@@ -45,15 +38,6 @@
   </v-card>
 </template>
 
-<script>
-import { defineComponent, ref } from "vue";
-export default defineComponent({
-  setup() {
-    return {
-      selectedKeys: ref["2"],
-    };
-  },
-});
-</script>
+<script></script>
 
 <style></style>

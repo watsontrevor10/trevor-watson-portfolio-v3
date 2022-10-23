@@ -2,8 +2,8 @@
   <v-container>
     <PageTitle
       pageTitle="Music Projects"
-      pageSubtitle="I work with a variety of bands and work on a number of musical projects.
-        Check out my projects!"
+      pageSubtitle="I perform with a variety of bands and work on a number of musical projects.
+        Check out some of my favorites below!"
     />
 
     <v-card flat>
@@ -62,7 +62,7 @@ export default {
           type: "video",
           genres: ["funk", "rock", "jazz", "bossa", "disco", "pop", "country"],
           subtitle:
-            "I've been wanting to do more video content, but it's been hard with the full-time job, kids, military service, etc. So I decided to record and post short weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
+            "I've been wanting to do more video content and play more bass, but it's been hard with the full-time job, kids, military service, etc. So I decided to record and post short weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnGgW2JTty_ytboYpVCT1rWJ",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See More Videos",
@@ -72,7 +72,7 @@ export default {
           type: "video",
           genres: ["jazz"],
           subtitle:
-            "3# is a jazz trio that me and two friends put together years ago. We play weddings, corporate events and other parties.",
+            "3# is a jazz trio that me and two friends put together years ago. We play weddings, corporate events and other parties, mostly we just love jamming together and keeping the music alive!",
           src: "https://www.youtube.com/embed/YBFQ2aVHFZ4",
           url: "https://www.threesharp.com/",
           urlText: "3# Website",
@@ -82,7 +82,7 @@ export default {
           type: "photo",
           genres: ["rock", "country", "pop"],
           subtitle:
-            "The Civilians Band is comprised of Army musicians who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll.",
+            "The Civilians Band is comprised of my Army musician brothers who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll.",
           src: "https://res.cloudinary.com/dx4uolokd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1630554638/Civilians/clark.wedding-2477_ax3vjn.jpg",
           url: "https://www.theciviliansband.com/",
           urlText: "Civilians Website",
@@ -102,7 +102,7 @@ export default {
           type: "video",
           genres: ["jazz", "rock", "pop"],
           subtitle:
-            "I love improvisation, so sometimes I mess around with solos.",
+            "I love improvisation, so sometimes I mess around with soloing. It's not always perfect, but it's always unique, and it always represents my own flair and interpretation of music.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnF_VwKZ4GjcVdUj_pDYukxY",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See more videos",
@@ -112,7 +112,7 @@ export default {
           type: "video",
           genres: ["rock", "funk", "jazz"],
           subtitle:
-            "Occasionally I get to collaborate with different artists and jam out. I love playing music, and sometimes we get together in the real world, but sometimes that's just not possible, so I love to do remote jams as well.",
+            "Occasionally I get to collaborate with different artists and jam out. Sometimes we get together in the real world, and sometimes we jam remotely, either way it's always a pleasure to collaborate with great musicians.",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnFgFmKEglBHxq-eOgyufHfZ",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See more videos",

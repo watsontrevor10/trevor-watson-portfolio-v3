@@ -33,30 +33,30 @@
 
     <v-container fluid>
       <v-row dense>
-        <v-col cols="6" v-for="(project, i) in projects" :key="i">
-          <v-card>
-            <v-img
-              :src="`${project.fields.mainImage.fields.file.url}`"
-              max-width="600"
-              height="500"
-            ></v-img>
-            <v-card-title>
-              <nuxt-link :to="`${project.fields.slug}`">{{
-                project.fields.projectName
-              }}</nuxt-link>
-            </v-card-title>
-            <v-card-text>
-              {{ project.fields.blurb }}
-            </v-card-text>
-            <v-card-actions class="justify-center">
-              <v-btn color="primary">
-                <nuxt-link :to="`${project.fields.slug}`"
-                  >See Project</nuxt-link
-                >
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
+        <v-layout row wrap>
+          <v-col cols="12" sm="6" v-for="(project, i) in projects" :key="i">
+            <v-card>
+              <v-img
+                :src="`${project.fields.mainImage.fields.file.url}`"
+              ></v-img>
+              <v-card-title>
+                <nuxt-link :to="`${project.fields.slug}`">{{
+                  project.fields.projectName
+                }}</nuxt-link>
+              </v-card-title>
+              <v-card-text>
+                {{ project.fields.blurb }}
+              </v-card-text>
+              <v-card-actions class="justify-center">
+                <v-btn color="primary">
+                  <nuxt-link :to="`${project.fields.slug}`"
+                    >See Project</nuxt-link
+                  >
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-col>
+        </v-layout>
       </v-row>
     </v-container>
   </v-container>
