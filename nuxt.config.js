@@ -66,14 +66,16 @@ export default {
   },
 
   fathom: {
-    namespace: "fathom", // optional
-    spa: "history", // recommended
+    spa: "history",
     siteId: "BNAXHQYJ",
     url: "https://cdn.usefathom.com/script.js",
     honorDNT: false,
-    includedDomains: ["https://trevorwatson.me/", "localhost:3000"],
-    excludedDomains: ["google.com"],
-    canonical: true,
+    includedDomains: [
+      "trevorwatson.me",
+      "www.trevorwatson.me",
+      "localhost:3000",
+      "localhost",
+    ],
   },
 
   router: {
