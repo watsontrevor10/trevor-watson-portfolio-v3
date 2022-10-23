@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.7",
+    "@ubclaunchpad/vue-fathom": "^2.0.0",
     "contentful": "^9.1.33",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
