@@ -44,7 +44,7 @@ export default {
   buildModules: ["@nuxtjs/vuetify"],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ["@lostdesign/nuxt-fathom"],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
@@ -63,6 +63,21 @@ export default {
         },
       },
     },
+  },
+
+  fathom: {
+    namespace: "fathom", // optional
+    spa: "history", // recommended
+    siteId: "BNAXHQYJ",
+    url: "https://custom.fathom.domain.com/script.js",
+    honorDNT: false,
+    includedDomains: ["https://trevorwatson.me/", "localhost:3000"],
+    excludedDomains: ["google.com"],
+    canonical: true,
+  },
+
+  router: {
+    middleware: ["fathom"],
   },
 
   env: {

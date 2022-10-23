@@ -1003,6 +1003,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@lostdesign/nuxt-fathom@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@lostdesign/nuxt-fathom/-/nuxt-fathom-1.0.3.tgz#1d5d40287adbccdf43f072496f485e1bb3b4628e"
+  integrity sha512-DOStEVgSt9ncmxmLSlW/lwG6nRmFqcN4XdM+V0lin+UKUzpqCeItcLZTFhOuHeTQrMj1uwwZm8EcG8xmcTBJnQ==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -3656,7 +3661,7 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fathom-client@^3.0.0:
+fathom-client@^3.0.0, fathom-client@^3.5.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/fathom-client/-/fathom-client-3.5.0.tgz#47bf3e67fa789ec415fe6efdc0ec02b9187b4b0d"
   integrity sha512-BiRDS9Q9a8Zma0H717FWC5cvf545K/CsxBpxKT22TcSl1EbRhhlHWIJgrdeiQUfdorBK2ppy09TwMOhRsbos/A==
