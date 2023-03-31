@@ -7,8 +7,8 @@
     />
     <v-container>
       <p>
-        Currently I am a software engineer at a fintech company, where I focus
-        primarily on reverse engeineering and automation scripting.
+        Currently I am a software engineer at a Fintech company, where I focus
+        primarily on reverse engineering and automation scripting.
       </p>
       <p>
         The list of projects below is mostly comprised of simple little projects

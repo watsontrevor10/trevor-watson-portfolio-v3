@@ -53,14 +53,14 @@
             <v-card-title class="text-h5 justify-center">1999</v-card-title>
             <v-card-text
               >Learned basic HTML and built my epic Starcraft clan page - no
-              longer available :( -</v-card-text
+              longer available :(</v-card-text
             >
           </v-timeline-item>
 
           <v-timeline-item>
             <v-card-title class="text-h5 justify-center">2001</v-card-title>
             <v-card-text
-              >Started studying jazz improv and upright bass</v-card-text
+              >Started studying jazz improvisation and upright bass</v-card-text
             >
           </v-timeline-item>
 
@@ -87,7 +87,7 @@
           <v-timeline-item>
             <v-card-title class="text-h5 justify-center">2009</v-card-title>
             <v-card-text
-              >Enlisted in the Army and Joined the 23rd Army Band as an Army
+              >Enlisted in the Army and joined the 23rd Army Band as an Army
               musician</v-card-text
             >
           </v-timeline-item>
@@ -112,7 +112,7 @@
               teams as a solutions consultant</v-card-text
             >
             <v-card-text
-              >Myslef and two friends decided to form a jazz trio, called 3#
+              >Myself and two friends decided to form a jazz trio, called 3#
               (pronounced Three Sharp)</v-card-text
             >
           </v-timeline-item>
@@ -126,7 +126,7 @@
             >
             <v-card-text
               >I decided to get out of consulting. I quit my job to do a coding
-              bootcamp at DevPoint Labs</v-card-text
+              boot camp at DevPoint Labs</v-card-text
             >
           </v-timeline-item>
 
@@ -138,7 +138,7 @@
               portfolio</v-card-text
             >
             <v-card-text
-              >I began doing research and coding for a fintech company call
+              >I began contracting, doing research and coding for a Fintech company called
               Atomic, and this eventually led me to accept a full-time position
               with them</v-card-text
             >
@@ -147,7 +147,7 @@
           <v-timeline-item>
             <v-card-title class="text-h5 justify-center">Present</v-card-title>
             <v-card-text
-              >I continue to work at Atomic as a software engineer, focused on
+              >I continue to work at Atomic as a software engineer; focused on
               reverse engineering and automation scripting, but also work on
               front-end and other projects</v-card-text
             >
