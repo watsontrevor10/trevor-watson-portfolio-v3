@@ -21,7 +21,8 @@
     <v-container>
       <v-card flat>
         <v-card-title
-          >I’m a professional software engineer and musician.</v-card-title
+          >I’m a professional musician, software engineer, and music
+          producer.</v-card-title
         >
         <div>
           <v-card-text
@@ -29,19 +30,29 @@
             on.</v-card-text
           >
           <v-card-text>
-            Between my full-time work as a
-            <nuxt-link to="/dev"><b>software engineer</b></nuxt-link
-            >, my part-time work as a
-            <nuxt-link to="/music"><b>gigging</b></nuxt-link> and Army musician
-            or just taking <nuxt-link to="/photo"><b>pictures</b></nuxt-link> of
-            my adventures there is a lot variation in the types of projects I
-            take on. I want to share what I'm working on here, and hope that you
-            find some value in it!
+            I work on a variety of projects, from building websites like this
+            and producing weekly YouTube bass videos, to producing music
+            projects for a variety of local bands and artists I like to keep
+            busy building cool things.
+          </v-card-text>
+          <v-card-text>
+            Check out my projects in the tabs above, I try to keep things
+            updated fairly regularly, but you can check my
+            <a href="https://www.youtube.com/@TrevorWatsonBass">
+              <b>
+                <u>YouTube Channel</u>
+              </b>
+            </a>
+            for more realtime updates.
           </v-card-text>
           <v-card-text>
             Feel free to
-            <a href="/about"><b>reach out</b></a> with questions or if you just
-            want to chat!
+            <a href="/about"
+              ><b>
+                <u>reach out</u>
+              </b>
+            </a>
+            with questions or if you just want to chat!
           </v-card-text>
         </div>
       </v-card>

@@ -11,11 +11,11 @@
                 </v-app-bar-title>
               </nuxt-link>
             </v-tab>
-            <v-tab to="/dev" nuxt>
+            <!-- <v-tab to="/dev" nuxt>
               <v-list-item-title>
                 <nuxt-link to="/dev" key="2"> Dev </nuxt-link>
               </v-list-item-title>
-            </v-tab>
+            </v-tab> -->
             <v-tab to="/music" nuxt>
               <v-list-item-title>
                 <nuxt-link to="/music" key="3">Music</nuxt-link>

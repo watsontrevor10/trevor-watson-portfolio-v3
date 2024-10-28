@@ -63,7 +63,7 @@ export default {
           type: "video",
           genres: ["funk", "rock", "jazz", "bossa", "disco", "pop", "country"],
           subtitle:
-            "I've been wanting to do more video content and play more bass, but it's been hard with the full-time job, kids, military service, etc. So I decided to record and post short weekly bass grooves for #musicMonday. This keeps me practicing, and I've come to really enjoy the process.",
+            "I set a goal to record a new bass groove every week for a year. This playlist is the result of that goal. I hope you enjoy!",
           src: "https://www.youtube.com/embed/videoseries?list=PLwcHBvR9QTnGgW2JTty_ytboYpVCT1rWJ",
           url: "https://www.youtube.com/c/TrevorWatson10",
           urlText: "See More Videos",
@@ -84,7 +84,7 @@ export default {
           genres: ["rock", "country", "pop"],
           subtitle:
             "The Civilians Band is comprised of my Army musician brothers who wanted to continue to play and perform outside of the military. We play covers of rock, pop, and country from every decade of rock 'n roll.",
-          src: "https://res.cloudinary.com/dx4uolokd/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1630554638/Civilians/clark.wedding-2477_ax3vjn.jpg",
+          src: "https://www.youtube.com/embed/videoseries?list=PLMcws_DQUfToNzPBuBaztWdh8IWGn3jZs&si=s8JiE1tbBURln4PM",
           url: "https://www.theciviliansband.com/",
           urlText: "Civilians Website",
         },

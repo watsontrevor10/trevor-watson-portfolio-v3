@@ -138,18 +138,19 @@
               portfolio</v-card-text
             >
             <v-card-text
-              >I began contracting, doing research and coding for a Fintech company called
-              Atomic, and this eventually led me to accept a full-time position
-              with them</v-card-text
+              >I began contracting, doing research and coding for a Fintech
+              company called Atomic, and this eventually led me to accept a
+              full-time position with them</v-card-text
             >
           </v-timeline-item>
 
           <v-timeline-item>
             <v-card-title class="text-h5 justify-center">Present</v-card-title>
             <v-card-text
-              >I continue to work at Atomic as a software engineer; focused on
-              reverse engineering and automation scripting, but also work on
-              front-end and other projects</v-card-text
+              >After a few years working as a software engineer I have branched
+              out on my own and work a variety of jobs. I continue to build my
+              YouTube presence, freelance as a bassist, and am working on a few
+              amazing projects that I'm really excited about.</v-card-text
             >
             <v-card-text
               >I also continue to perform with the 23rd Army Band, 3# Jazz Trio,
